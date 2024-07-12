@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python3:
+    build: .
+    container_name: 'yithdice'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./app:/root/app
+    command:
+      python3 /root/app/app.py
